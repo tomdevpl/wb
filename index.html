@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>WordBeater</title>
+  <style>
+    *   {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Roboto', sans-serif;
+      }
+
+        header h1  {
+        background: #24C6DC;
+        background: -webkit-linear-gradient(to bottom, #514A9D, #1a47ce);
+        background: linear-gradient(to bottom, #514A9D, #1a47ce);
+        width: 100%;
+        display: block;
+        padding: 1rem;
+        font-size: 3rem;
+        color: white;
+        text-align: center;
+    }
+    h1 p    {
+        margin-top: 1rem;
+        font-size: 1rem;
+    }
+
+    div.container  {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        width: 70%;
+        margin:0 auto;
+        font-size: 1.3rem;
+        text-align: center;
+    }
+    /* Word & Input */
+    p.lead {
+      margin: 1rem;
+      margin-top: 2rem;
+    }
+
+    h2#current-word {
+      margin: 1rem;
+    }
+    input#word-input {
+      display: block;
+      padding: 3px 20px;
+      margin: 2rem auto;
+      width: 50%;
+      border: none;
+      border-bottom: #ff4a34 2px solid;
+      font-size: 1.5rem;
+      outline: none;
+      resize: none;
+    }
+    h4#message {
+      margin: 1rem;
+      margin-bottom: 3rem;
+    }
+    /* Time & Score Columns */
+    
+    /* Instructions */
+    #card {
+      background-color: #999;
+      padding: 1rem 2rem;
+      margin: 2rem;
+    }
+
+    #card h5 {
+      margin-bottom: 1rem;
+    }
+
+    </style>
+</head>
+
+<body>
+  <header>
+    <h1>WordBeater</h1>
+  </header>
+  <div class="container">
+
+    <!-- Word & Input -->
+    <div class="row">
+      <div>
+        <p class="lead">Type The Given Word Within
+          <span id="seconds" style="color:#ff4a34">5</span> Seconds:</p>
+        <h2 id="current-word">hello</h2>
+        <input type="text" class="form-control form-control-lg" placeholder="Start typing..." id="word-input" autofocus>
+        <h4 id="message"></h4>
+
+        <!-- Time & Score Columns -->
+        <div>
+          <div>
+            <h3>Time Left:
+              <span id="time">0</span>
+            </h3>
+          </div>
+          <div>
+            <h3>Score:
+              <span id="score">0</span>
+            </h3>
+          </div>
+        </div>
+
+        <!-- Instructions -->
+        <div>
+          <div>
+            <div id="card">
+              <h5>Instructions</h5>
+              <p>Type each word in the given amount of seconds to score. To play again, just type the current word.
+                Your score
+                will reset</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
